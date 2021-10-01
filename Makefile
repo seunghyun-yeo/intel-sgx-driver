@@ -8,6 +8,8 @@ intel_sgx-y := encl.o main.o driver.o ioctl.o
 
 else
 
+#To use custom version of sgx driver
+#You need to rebuild kernel without inkernel sgx module support
 KDIR := /lib/modules/$(shell uname -r)/build
 KSYM_MMPUT_ASYNC := $(shell grep  "mmput_async\svmlinux\sEXPORT" $(KDIR)/Module.symvers)
 KSYM_LOOKUP := $(shell grep "kallsyms_lookup_name\svmlinux\sEXPORT" $(KDIR)/Module.symvers)
