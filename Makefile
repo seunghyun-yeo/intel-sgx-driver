@@ -11,8 +11,10 @@ else
 # To use custom sgx driver
 # You need to rebuild kernel without inkernel sgx module
 # Disable SGX at Processor type and festures of "make menuconfig"
+# Use 5.10 to enable this driver 	
 # get kernel source assist linki : https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
-# build kernel link : https://wiki.ubuntu.com/KernelTeam/GitKernelBuild
+# commit f93026b28e2afe5060a493b0bbcee19d12961b7e for 5.10.70
+
 
 KDIR := /lib/modules/$(shell uname -r)/build
 KSYM_MMPUT_ASYNC := $(shell grep  "mmput_async\svmlinux\sEXPORT" $(KDIR)/Module.symvers)
