@@ -13,7 +13,7 @@ else
 # Disable SGX at Processor type and festures of "make menuconfig"
 # Use 5.10 to enable this driver 	
 # get kernel source assist linki : https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
-# commit f93026b28e2afe5060a493b0bbcee19d12961b7e for 5.10.70
+# tag : v5.10-rc7
 
 
 KDIR := /lib/modules/$(shell uname -r)/build
